@@ -13,3 +13,18 @@ def is_prime(number):
 #Examples
 print(is_prime(7))  # Prints True because 7 is prime
 print(is_prime(15))  # Prints False because 15 is not prime
+
+
+# The 'greater' function takes two numbers and returns the greater one.
+# For example, if we compare 10 and 5, the function returns 10 because it's greater.
+# If we compare 3 and 8, the function returns 8 because it's greater.
+
+def greater(a, b):
+    if a > b:
+        return a  # If 'a' is greater than 'b', return 'a'
+    else:
+        return b  # If 'b' is greater than 'a', return 'b'
+
+#Examples
+print(greater(10, 5))  # Prints 10 because 10 is greater than 5
+print(greater(3, 8))   # Prints 8 because 8 is greater than 3
