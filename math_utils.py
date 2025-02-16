@@ -30,6 +30,21 @@ print(greater(10, 5))  # Prints 10 because 10 is greater than 5
 print(greater(3, 8))   # Prints 8 because 8 is greater than 3
 
 
+# The 'is_even' function checks whether a given number is even or odd.
+# A number is even if it is divisible by 2 with no remainder, and it is odd if it is not.
+# For example, 4 is even because 4 % 2 == 0, but 7 is odd because 7 % 2 != 0.
+
+def is_even(number):
+    if number % 2 == 0:  # Check if the number is divisible by 2 with no remainder
+        return True  # Return True if the number is even
+    else:
+        return False  # Return False if the number is odd
+
+# Example usage:
+print(is_even(4))  # This will print True, because 4 is even
+print(is_even(7))  # This will print False, because 7 is odd
+
+
 # The 'factorial' function calculates the factorial of a given number 'n'.
 # The factorial of a number is the product of all positive integers less than or equal to that number.
 # For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
