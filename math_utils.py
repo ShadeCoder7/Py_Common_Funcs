@@ -28,3 +28,16 @@ def greater(a, b):
 #Examples
 print(greater(10, 5))  # Prints 10 because 10 is greater than 5
 print(greater(3, 8))   # Prints 8 because 8 is greater than 3
+
+
+# The 'factorial' function calculates the factorial of a given number 'n'.
+# The factorial of a number is the product of all positive integers less than or equal to that number.
+# For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
+
+def factorial(n):
+    if n == 1:
+        return 1  # Base case: if n is 1, return 1
+    return n * factorial(n - 1)  # Return the result of the multiplication
+
+#Examples
+print(factorial(5))  # This will print 120, as the factorial of 5 is 120
