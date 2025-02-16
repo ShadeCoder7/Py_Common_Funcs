@@ -30,6 +30,21 @@ print(greater(10, 5))  # Prints 10 because 10 is greater than 5
 print(greater(3, 8))   # Prints 8 because 8 is greater than 3
 
 
+# The 'lesser' function takes two numbers and returns the lesser one.
+# For example, if we compare 10 and 5, the function returns 5 because it's smaller.
+# If we compare 3 and 8, the function returns 3 because it's smaller.
+
+def lesser(a, b):
+    if a < b:
+        return a  # If 'a' is less than 'b', return 'a'
+    else:
+        return b  # If 'b' is less than 'a', return 'b'
+
+# Examples
+print(lesser(10, 5))  # Prints 5 because 5 is smaller than 10
+print(lesser(3, 8))   # Prints 3 because 3 is smaller than 8
+
+
 # The 'is_even' function checks whether a given number is even or odd.
 # A number is even if it is divisible by 2 with no remainder, and it is odd if it is not.
 # For example, 4 is even because 4 % 2 == 0, but 7 is odd because 7 % 2 != 0.
