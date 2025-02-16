@@ -1,3 +1,58 @@
+# SUM
+# The 'sum' function calculates the sum of two numbers 'a' and 'b'.
+# This is a simple operation where the two given numbers are added together.
+# Example: If 'a' is 4 and 'b' is 2, the result will be 6 (4 + 2 = 6).
+
+def sum(a, b):
+    return a + b  # Add the two numbers and return the result
+
+# Example usage of the sum function
+print(sum(4, 2))  # Expected output: 6
+print(sum(6, 10))  # Expected output: 16
+
+
+# SUBTRACTION
+# The 'subtract' function calculates the difference between two numbers 'a' and 'b'.
+# This is a basic arithmetic operation where 'b' is subtracted from 'a'.
+# Example: If 'a' is 5 and 'b' is 3, the result will be 2 (5 - 3 = 2).
+
+def subtract(a, b):
+    return a - b  # Subtract 'b' from 'a' and return the result
+
+# Example usage of the subtract function
+print(subtract(5, 3))  # Expected output: 2
+print(subtract(10, 4))  # Expected output: 6
+
+
+# MULTIPLICATION
+# The 'multiply' function calculates the product of two numbers 'a' and 'b'.
+# This is a basic arithmetic operation where 'a' is multiplied by 'b'.
+# Example: If 'a' is 3 and 'b' is 4, the result will be 12 (3 * 4 = 12).
+
+def multiply(a, b):
+    return a * b  # Multiply 'a' and 'b' and return the result
+
+# Example usage of the multiply function
+print(multiply(3, 4))  # Expected output: 12
+print(multiply(6, 7))  # Expected output: 42
+
+
+# DIVISION
+# The 'divide' function calculates the quotient of 'a' divided by 'b'.
+# This is a basic arithmetic operation where 'a' is divided by 'b'.
+# Note: If 'b' is 0, the function will return 'None' to avoid division by zero error.
+# Example: If 'a' is 8 and 'b' is 4, the result will be 2 (8 / 4 = 2).
+
+def divide(a, b):
+    if b == 0:  # Check if division by zero is attempted
+        return None  # Return 'None' to handle the division by zero error
+    return a / b  # Divide 'a' by 'b' and return the result
+
+# Example usage of the divide function
+print(divide(8, 4))  # Expected output: 2.0
+print(divide(10, 0))  # Expected output: None (division by zero)
+
+
 # PRIME NUMBER CHECKER
 # A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 # For example, 7 is prime because its only divisors are 1 and 7. However, 10 is not prime because it can be divided by 1, 2, 5, and 10.
