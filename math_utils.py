@@ -41,3 +41,20 @@ def factorial(n):
 
 #Examples
 print(factorial(5))  # This will print 120, as the factorial of 5 is 120
+
+
+# The 'fibonacci' function calculates the Fibonacci number at position 'n'.
+# The Fibonacci sequence starts with 0 and 1, and each subsequent number is the sum of the two previous ones.
+# For example, the Fibonacci number at position 4 is 3, since the sequence is: 0, 1, 1, 2, 3...
+
+def fibonacci(n):
+    if n == 0:  # Base case: if n is 0, return 0
+        return 0
+    elif n == 1:  # Base case: if n is 1, return 1
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)  # Recursive calls to get the sum of the two previous numbers
+
+# Example usage:
+print(fibonacci(4))  # This will print 3, because the Fibonacci number at position 4 is 3
+print(fibonacci(10))  # This will print 55, because the Fibonacci number at position 10 is 55
