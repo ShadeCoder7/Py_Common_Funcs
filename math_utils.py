@@ -244,3 +244,20 @@ def power(base, exp):
 print(power(2, 3))  # This will print 8 (2^3)
 print(power(5, 0))  # This will print 1 (5^0)
 print(power(3, 4))  # This will print 81 (3^4)
+
+
+# COUNTING DIGITS USING RECURSION
+# The 'count_digits' function calculates the number of digits in a given number using recursion.
+# The mathematical approach is to keep dividing the number by 10 until only one digit remains.
+# For example, the number 5681040 has 7 digits.
+
+def count_digits(n):
+    if n < 10:  # Base case: if the number has only one digit
+        return 1
+    else:
+        return 1 + count_digits(n // 10)  # Recursive call by removing the last digit
+
+# Example usage:
+print(count_digits(5681040))  # This will print 7
+print(count_digits(123))      # This will print 3
+print(count_digits(9))        # This will print 1
