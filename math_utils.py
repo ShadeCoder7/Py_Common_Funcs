@@ -143,3 +143,104 @@ def fibonacci(n):
 # Example usage for Fibonacci function
 print(fibonacci(4))  # This will print 3, because the Fibonacci number at position 4 is 3
 print(fibonacci(10))  # This will print 55, because the Fibonacci number at position 10 is 55
+
+
+# LIST SUM CALCULATION
+# The 'sum_list' function calculates the sum of all the elements in a list.
+# It does so by recursively adding the first element of the list to the sum of the remaining elements.
+# For example, given the list [10, 11, 20, 32], it will return 73 by adding 10 + 11 + 20 + 32.
+
+def sum_list(n):
+    if n == []:  # Base case: if the list is empty, return 0
+        return 0
+    else:
+        return n[0] + sum_list(n[1:])  # Add the first element to the sum of the remaining elements
+
+# Example usage:
+print(sum_list([10, 11, 20, 32]))  # This will print 73 (10 + 11 + 20 + 32)
+
+
+# LIST REVERSAL
+# The 'reverse_list' function reverses the order of the elements in a list.
+# It does so by recursively reversing the rest of the list and adding the first element at the end.
+# For example, given the list [1, 2, 3, 4], it will return [4, 3, 2, 1].
+
+def reverse_list(n):
+    if n == []:  # Base case: if the list is empty, return an empty list
+        return []
+    else:
+        return reverse_list(n[1:]) + [n[0]]  # Recursion: reverse the rest of the list and add the first element at the end
+
+# Example usage:
+print(reverse_list([1, 2, 3, 4]))  # This will print [4, 3, 2, 1]
+
+
+# COUNTING ELEMENTS IN A LIST
+# The 'count_elements' function counts the number of elements in a list.
+# It works by recursively counting the first element and then counting the rest of the list.
+# For example, given the list [1, 2, 3, 4], it will return 4.
+
+def count_elements(lista):
+    if lista == []:  # Base case: an empty list has 0 elements
+        return 0
+    else:
+        return 1 + count_elements(lista[1:])  # Count the first element and recurse for the rest of the list
+
+# Example usage:
+print(count_elements([1, 2, 3, 4]))  # This will print 4
+
+
+# FINDING THE MAXIMUM IN A LIST
+# The 'max_in_list' function finds the maximum element in a list using recursion.
+# It compares the first element with the maximum element of the rest of the list.
+# For example, for the list [1, 5, 3, 9, 2], it will return 9.
+
+def max_in_list(lista):
+    if len(lista) == 1:  # Base case: If the list has only one element, return that element
+        return lista[0]
+    else:
+        # Compare the first element with the maximum of the rest of the list
+        max_rest = max_in_list(lista[1:])
+        if lista[0] > max_rest:
+            return lista[0]  # Return the first element if it is greater than the rest
+        else:
+            return max_rest  # Otherwise, return the maximum of the rest
+
+# Example usage:
+print(max_in_list([1, 5, 3, 9, 2]))  # This will print 9
+
+
+# CHECKING IF A WORD IS A PALINDROME
+# The 'is_palindrome' function checks if a word is a palindrome using recursion.
+# A palindrome is a word that reads the same forwards and backwards, like "radar".
+# For example, for the word "radar", it will return True.
+
+def is_palindrome(word):
+    if len(word) <= 1:  # Base case: a word with one character or empty is a palindrome
+        return True
+    else:
+        if word[0] == word[-1]:  # Compare the first and last character
+            return is_palindrome(word[1:-1])  # Recursively call with the word without the first and last characters
+        else:
+            return False  # If they don't match, return False
+
+# Example usage:
+print(is_palindrome("radar"))  # This will print True
+print(is_palindrome("hello"))  # This will print False
+
+
+# EXPONENTIATION USING RECURSION
+# The 'power' function calculates the result of raising a base to an exponent using recursion.
+# The mathematical formula is: base^exp (base raised to the power of exp).
+# For example, 2^3 (2 raised to the power of 3) is 8.
+
+def power(base, exp):
+    if exp == 0:  # Base case: any number raised to the power of 0 is 1
+        return 1
+    else:
+        return base * power(base, exp - 1)  # Multiply the base by the result of the smaller exponent
+
+# Example usage:
+print(power(2, 3))  # This will print 8 (2^3)
+print(power(5, 0))  # This will print 1 (5^0)
+print(power(3, 4))  # This will print 81 (3^4)
