@@ -261,3 +261,20 @@ def count_digits(n):
 print(count_digits(5681040))  # This will print 7
 print(count_digits(123))      # This will print 3
 print(count_digits(9))        # This will print 1
+
+
+# SUMMING DIGITS USING RECURSION
+# The 'sum_digits' function calculates the sum of all digits in a given number using recursion.
+# The approach is to extract the last digit and add it to the sum of the remaining digits.
+# For example, the number 12345 will be processed as: 5 + 4 + 3 + 2 + 1 = 15.
+
+def sum_digits(n):
+    if n < 10:  # Base case: if the number has only one digit, return it
+        return n
+    else:
+        return (n % 10) + sum_digits(n // 10)  # Extract the last digit and recurse with the remaining number
+
+# Example usage:
+print(sum_digits(12345))  # This will print 15 (1+2+3+4+5)
+print(sum_digits(987))    # This will print 24 (9+8+7)
+print(sum_digits(5))      # This will print 5
